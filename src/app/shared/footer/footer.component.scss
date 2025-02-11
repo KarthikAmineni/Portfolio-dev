@@ -1,0 +1,89 @@
+.footer {
+  background: var(--primary-color);
+  color: white;
+  padding: 1.5rem 0;
+  // margin-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    color: white;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &.github-link {
+      padding: 8px;
+      
+      .github-icon {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        filter: brightness(0) invert(1); // Make the SVG white
+      }
+    }
+    &.linkedin-link {
+      padding: 8px;
+      
+      .linkedin-icon {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        filter: brightness(0) invert(1); // Make the SVG white
+      }
+    }
+
+    mat-icon {
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}

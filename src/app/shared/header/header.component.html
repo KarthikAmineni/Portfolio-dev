@@ -1,0 +1,18 @@
+<p>header works!</p>
+
+<a routerLink="/" class="logo">
+  <span class="highlight">K</span>
+  <span class="highlight">A</span>
+</a>
+
+<div class="nav-links">
+  <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+  <a mat-button routerLink="/about" routerLinkActive="active">About</a>
+  <a mat-button routerLink="/projects" routerLinkActive="active">Projects</a>
+  <a mat-button routerLink="/certifications" routerLinkActive="active">Certifications</a>
+  <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
+  <a mat-raised-button color="primary" href="assets/pdf/resume.pdf" target="_blank" class="download-cv">
+    <mat-icon>get_app</mat-icon>
+    <span>Download CV</span>
+  </a>
+</div>

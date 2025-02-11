@@ -1,0 +1,54 @@
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="profile-container" [@glowPulse]="glowState">
+        <div class="profile-wrapper">
+          <div class="profile-img">
+            <div class="rotating-border"></div>
+            <img src="assets/images/AVK_PP_Photo__1_-removebg-preview.png" alt="Karthik Amineni" [@fadeInUp] class="profilePhoto">
+          </div>
+        </div>
+      </div>
+
+      <div class="text-content" [@fadeInUp]>
+        <h1 class="greeting">
+          <span class="greeting-text">Hi, I'm</span>
+          <span class="name">Karthik Amineni</span>
+        </h1>
+        
+        <div class="typed-container">
+          <ngx-typed-js [strings]="typedStrings" [loop]="true" [typeSpeed]="150" [backSpeed]="75" [startDelay]="1000">
+            <span class="typing">I am a <span class="typed"></span></span>
+          </ngx-typed-js>
+        </div>
+
+        <div class="cta-buttons">
+          <a mat-raised-button class="glow-button" routerLink="/contact">
+            <mat-icon>forum</mat-icon>
+            <span>Let's Talk</span>
+          </a>
+          <a mat-raised-button class="download-cv" href="assets/pdf/resume.pdf" target="_blank">
+            <mat-icon>get_app</mat-icon>
+            <span>Download CV</span>
+          </a>
+        </div>
+
+        <div class="tech-stack">
+          <div class="tech-icon" *ngFor="let tech of techStack" [@bounceInOut]>
+            <div class="icon-wrapper">
+              <img [src]="tech.icon" [alt]="tech.name">
+            </div>
+            <span>{{tech.name}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="decorative-shapes">
+    <div class="shape left-top" [@rotateIn]></div>
+    <div class="shape right-top" [@rotateIn]></div>
+    <div class="shape left-bottom" [@rotateIn]></div>
+    <div class="shape right-bottom" [@rotateIn]></div>
+  </div>
+</section>

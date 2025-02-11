@@ -1,0 +1,41 @@
+<section class="projects-section" [@projectsAnimation]>
+  <div class="container">
+    <h2 class="section-title">My Projects</h2>
+    
+    <div class="projects-grid">
+      <div class="project-card" *ngFor="let project of projects">
+        <div class="project-image" [style.backgroundImage]="'url(' + project.image + ')'">
+          <div class="project-overlay" [@hoverAnimation]>
+            <div class="project-links">
+              <a [href]="project.demoUrl" target="_blank" class="project-link">
+                <mat-icon>open_in_new</mat-icon>
+                <span>Live Demo</span>
+              </a>
+              <a [href]="project.githubUrl" target="_blank" class="project-link">
+                <mat-icon>code</mat-icon>
+                <span>Source Code</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+          
+          <div class="project-tech">
+            <span class="tech-tag" *ngFor="let tech of project.technologies">
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="background-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+</section>
